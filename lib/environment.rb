@@ -6,3 +6,5 @@ module CraftBeers
 end
 
 require_relative "./cli"
+require_relative "./scraper"
+require_relative "./beer"
