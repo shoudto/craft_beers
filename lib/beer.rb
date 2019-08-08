@@ -1,6 +1,6 @@
 class Beer
 
-  attr_accessor :name, :style, :company, :abv
+  attr_accessor :name, :style, :company, :abv, :url
 
   @@all = []
 
@@ -11,5 +11,5 @@ class Beer
   def self.all
     @@all
   end
-  
+
 end

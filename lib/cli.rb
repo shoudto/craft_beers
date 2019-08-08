@@ -8,9 +8,20 @@ class Cli
     puts "--------------------------------------"
     puts " "
     #---------------------------------------------
-    Scraper.scrape_beer_list 
-    # => Adding a list of beers from my scraper class
 
+    # => Adding a list of beers from my scraper class
+    Scraper.scrape_beer_list
+    print_beers
+
+  end
+
+  def pick_your_craft
+  end
+
+  def print_beers
+    Beer.all.each.with_index(1) do |beer, index|
+      puts "#{index}. #{beer.name}"
+    end
   end
 
 end

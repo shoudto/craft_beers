@@ -7,10 +7,10 @@ class Scraper
 
       beer_list = doc.css("tr")
 
-      beer_list.each do |beer|
+      beer_list.drop(2).each do |beer|
         brew = Beer.new
-        binding.pry  
-        brew.name = beer
+        brew.name = beer.css("b").text
+        # brew.url = beer.css("a").attr('href').value
       end
   end
 
