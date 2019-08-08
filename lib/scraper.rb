@@ -11,7 +11,7 @@ class Scraper
       # => iteration to scrape the text name of the beer
       beer_list.drop(1).each do |beer|
         brew = Beer.new
-        brew.name = beer.css("b").text
+        brew.name = beer.css("a b").text
       end
       #-------------------------------------------------
   end
@@ -19,10 +19,9 @@ class Scraper
   def self.scraper_beer_info(beer)
 
     # adding attributes with the scrape website
-    
+
     html = open("https://www.beeradvocate.com")
     doc = Nokogiri::HTML(html)
 
-    binding.pry
   end
 end
