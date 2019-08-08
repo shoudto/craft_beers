@@ -1,5 +1,9 @@
 require_relative "./craft_beers/version"
+
 require 'pry'
+require 'nokogiri'
+require 'open-uri'
+require 'colorize'
 
 module CraftBeers
   class Error < StandardError; end

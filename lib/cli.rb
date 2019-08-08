@@ -8,7 +8,7 @@ class Cli
     puts "--------------------------------------"
     puts " "
     #---------------------------------------------
-    
+    Scraper.scrape_beer_list 
     # => Adding a list of beers from my scraper class
 
   end
