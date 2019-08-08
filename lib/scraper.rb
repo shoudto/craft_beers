@@ -12,6 +12,7 @@ class Scraper
       beer_list.drop(1).each do |beer|
         brew = Beer.new
         brew.name = beer.css("a b").text
+        brew.url = beer.css("a").attr('href').value
       end
       #-------------------------------------------------
   end
