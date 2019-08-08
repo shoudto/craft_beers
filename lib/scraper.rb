@@ -7,11 +7,13 @@ class Scraper
 
       beer_list = doc.css("tr")
 
-      beer_list.drop(2).each do |beer|
+
+      # => iteration to scrape the text name of the beer
+      beer_list.drop(1).each do |beer|
         brew = Beer.new
         brew.name = beer.css("b").text
-        # brew.url = beer.css("a").attr('href').value
       end
+      #-------------------------------------------------
   end
 
   def self.scraper_beer_info(beer)
