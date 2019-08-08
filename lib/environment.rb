@@ -1,4 +1,5 @@
 require_relative "./craft_beers/version"
+require 'pry'
 
 module CraftBeers
   class Error < StandardError; end
