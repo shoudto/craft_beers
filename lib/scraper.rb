@@ -18,5 +18,11 @@ class Scraper
 
   def self.scraper_beer_info(beer)
 
+    # adding attributes with the scrape website
+    
+    html = open("https://www.beeradvocate.com")
+    doc = Nokogiri::HTML(html)
+
+    binding.pry
   end
 end
