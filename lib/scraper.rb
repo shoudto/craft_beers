@@ -16,7 +16,7 @@ class Scraper
       #-------------------------------------------------
   end
 
-  def self.scraper_beer_info(beer)
+  def self.scrape_beer_info(beer)
 
     # adding attributes with the scrape website
 
