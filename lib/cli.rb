@@ -12,8 +12,11 @@ class Cli
     # => Adding a list of beers from my scraper class
     Scraper.scrape_beer_list
     print_beers
+    pick_your_craft
+  end
 
-    #----------------------------------------------
+  def pick_your_craft
+
     input = ""
     while input != "exit" do
 
@@ -22,12 +25,28 @@ class Cli
         puts " "
 
         input = gets.strip.downcase
+        
+        if (1..Beer.all.count).include?(input.to_i)
+          Scraper.scrape_beer_info(Beer.all[input.to_i-1]) if !Beer.all[input.to_i-1].style
 
-        Scraper.scrape_beer_info(Beer.all[input.to_i-1]) if !Beer.all[input.to_i-1].style
-    end
-  end
+          puts " "
+          puts "Style: #{Beer.all[input.to_i-1].style}"
+          puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+          puts "Company:#{Beer.all[input.to_i-1].company}"
+          puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+          puts "ABV: #{Beer.all[input.to_i-1].abv}"
+          puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+          puts "Location: #{Beer.all[input.to_i-1].location}"
+          puts " "
 
-  def pick_your_craft
+        elsif input != "exit"
+
+          puts " "
+          puts "ERROR!"
+          puts " "
+
+        end
+      end
   end
 
   def print_beers
@@ -35,5 +54,4 @@ class Cli
       puts "#{index}. #{beer.name}"
     end
   end
-
 end

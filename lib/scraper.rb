@@ -22,8 +22,7 @@ class Scraper
     # adding attributes with the scrape website
 
     html = open("https://www.beeradvocate.com#{beer.url}")
-    doc = Nokogiri::HTML(html)
-    binding.pry
+    doc = Nokogiri::HTML(html) 
 
     beer.style =  doc.css("a b").text
     beer.abv = doc.css("dd[class=beerstats]")[1].text
