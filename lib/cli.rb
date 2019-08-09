@@ -64,7 +64,10 @@ class Cli
 
   def print_beers
     Beer.all.each.with_index(1) do |beer, index|
-      puts "#{index}. #{beer.name}".colorize(:color => :red)
+      print "#{index}. ".colorize(:color => :green)
+      print "#{beer.name}".colorize(:color => :red)
+      puts " "
+      puts ""
     end
   end
 end
