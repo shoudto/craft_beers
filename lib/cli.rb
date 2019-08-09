@@ -59,9 +59,9 @@ class Cli
         # error message to try again.
         elsif input != "exit"
           puts " "
-          puts "                                   ".colorize(:color => :white, :background => :red)
-          puts "INCORRECT ENTRY! Please try again! ".colorize(:color => :black, :background => :red)
-          puts "                                   ".colorize(:color => :white, :background => :red)
+          puts "                                    ".colorize(:color => :white, :background => :red)
+          puts " INCORRECT ENTRY! Please try again! ".colorize(:color => :black, :background => :red)
+          puts "                                    ".colorize(:color => :white, :background => :red)
           puts " "
         #-------------------------------------------------------------------------------
         end
