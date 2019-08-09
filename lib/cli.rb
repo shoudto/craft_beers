@@ -4,8 +4,11 @@ class Cli
 
     # => Introduction
     puts " "
-    puts "Welcome to the Top List Craft Beers!!!".colorize(:color => :green)
-    puts "--------------------------------------".colorize(:color => :green)
+    puts "                                           ".colorize(:color => :black, :background => :blue)
+    puts "        Welcome to the Top List            ".colorize(:color => :black, :background => :blue)
+    puts "                  of                       ".colorize(:color => :black, :background => :blue)
+    puts "             Craft Beers!!!                ".colorize(:color => :black, :background => :blue)
+    puts " --------------------------------------    ".colorize(:color => :black, :background => :blue)
     puts " "
     #-------------------------------------------------------------------------------
     # calling instance and class method
@@ -20,8 +23,8 @@ class Cli
     while input != "exit" do
 
         puts " "
-        puts "Choose your BEER!".colorize(:color => :green)
-        puts "Enter a number or type 'exit' to exit.".colorize(:color => :green)
+        puts "Choose your BEER!".colorize(:color => :blue)
+        puts "Enter a number or type 'exit' to exit.".colorize(:color => :blue)
         puts " "
 
         input = gets.strip.downcase
@@ -55,7 +58,9 @@ class Cli
         # error message to try again.
         elsif input != "exit"
           puts " "
-          puts "INCORRECT ENTRY! Please try again".colorize(:color => :white, :background => :red)
+          puts "                                   ".colorize(:color => :white, :background => :red)
+          puts "INCORRECT ENTRY! Please try again! ".colorize(:color => :black, :background => :red)
+          puts "                                   ".colorize(:color => :white, :background => :red)
           puts " "
         #-------------------------------------------------------------------------------
         end
@@ -67,11 +72,11 @@ class Cli
     # adds a number list with the beer name.
 
     Beer.all.each.with_index(1) do |beer, index|
-      print "#{index}. ".colorize(:color => :green)
+      print "#{index}. ".colorize(:color => :blue)
       print "#{beer.name}".colorize(:color => :red)
       puts " "
       puts ""
     end
   end
-  
+
 end
