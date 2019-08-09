@@ -25,11 +25,13 @@ class Cli
         puts " "
 
         input = gets.strip.downcase
-        
+
         if (1..Beer.all.count).include?(input.to_i)
           Scraper.scrape_beer_info(Beer.all[input.to_i-1]) if !Beer.all[input.to_i-1].style
 
           puts " "
+          puts "Name: #{Beer.all[input.to_i-1].name}"
+          puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
           puts "Style: #{Beer.all[input.to_i-1].style}"
           puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
           puts "Company:#{Beer.all[input.to_i-1].company}"
