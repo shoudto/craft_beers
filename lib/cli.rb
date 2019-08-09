@@ -15,6 +15,7 @@ class Cli
     Scraper.scrape_beer_list
     print_beers
     pick_your_craft
+    # print_type_of_beer
   end
 
   def pick_your_craft
@@ -70,7 +71,6 @@ class Cli
   def print_beers
 
     # adds a number list with the beer name.
-
     Beer.all.each.with_index(1) do |beer, index|
       print "#{index}. ".colorize(:color => :blue)
       print "#{beer.name}".colorize(:color => :red)
@@ -78,5 +78,14 @@ class Cli
       puts ""
     end
   end
+
+  # def print_type_of_beer(input = "")
+  #
+  #   input = gets.strip
+  #
+  #   if input == "yes"
+  #     puts "hello"
+  #   end
+  # end
 
 end
