@@ -9,7 +9,8 @@ class Scraper
       beer_list = doc.css("tr")
 
 
-      # => iteration to scrape the name of the beer
+      # => iteration to scrape the name of the beer and url of the beer
+      
       beer_list.drop(1).each do |beer|
         brew = Beer.new
         brew.name = beer.css("a b").text
