@@ -1,6 +1,6 @@
 # CraftBeers
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/craft_beers`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome "Write about your project here"
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -9,20 +9,20 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'craft_beers'
+git clone git@github.com:shoudto/craft_beers.git
 ```
 
 And then execute:
 
-    $ bundle
+    cd craft_beers/
 
 Or install it yourself as:
 
-    $ gem install craft_beers
+    ruby bin/run
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Write my instructions about project.
 
 ## Development
 
