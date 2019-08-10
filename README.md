@@ -6,7 +6,7 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's ide:
 
 ```ruby
 git clone git@github.com:shoudto/craft_beers.git
@@ -16,7 +16,7 @@ And then execute:
 
     cd craft_beers/
 
-Or install it yourself as:
+And run the code with:
 
     ruby bin/run
 
