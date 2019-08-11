@@ -1,8 +1,6 @@
 # CraftBeers
 
-Welcome "Write about your project here"
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Application provides a CLI to view the Top 250 Craft Beers on Beer Advocate website!
 
 ## Installation
 
@@ -22,7 +20,9 @@ And run the code with:
 
 ## Usage
 
-TODO: Write my instructions about project.
+In my CLI beer application a list would print all of the craft beers of your choosing and would have to enter a
+number. Then it will output the info of the beer and if enter the wrong entry there will be an error message to
+make sure you enter the correct entry. Then to stop the application just type in 'exit'.
 
 ## Development
 
