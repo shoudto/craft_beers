@@ -15,7 +15,6 @@ class Cli
     Scraper.scrape_beer_list
     print_beers
     pick_your_craft
-    # print_type_of_beer
   end
 
   def pick_your_craft
@@ -78,14 +77,4 @@ class Cli
       puts ""
     end
   end
-
-  # def print_type_of_beer(input = "")
-  #
-  #   input = gets.strip
-  #
-  #   if input == "yes"
-  #     puts "hello"
-  #   end
-  # end
-
 end
